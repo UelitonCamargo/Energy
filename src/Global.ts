@@ -38,6 +38,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Sora', sans-serif;
     }
 
+    body {
+        background-color: ${props => props.theme['gray-900']};
+        color: ${props => props.theme['gray-300']};
+    } 
+
     body, input, textarea {
         font-family: 'Inter', sans-serif;
         font-weight: 400;
