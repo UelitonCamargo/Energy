@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
     :focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${props => props.theme['red-100']};
+        box-shadow: 0 0 0 2px ${props => props.theme['green-500']};
     }
 
     html {
@@ -36,6 +36,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h1, h2, h3, h4, h5, h6, button {
         font-family: 'Sora', sans-serif;
+        font-weight: bold;
     }
 
     body {

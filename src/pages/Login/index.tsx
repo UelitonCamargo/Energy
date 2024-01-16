@@ -1,25 +1,33 @@
-import { Lightning } from "@phosphor-icons/react";
-import { ImageContainer, LoginContainer, RegisterAccount } from "./styles";
+import { EnvelopeSimple, Lightbulb, LockSimple } from "@phosphor-icons/react";
+import { BoxAllInputs, ImageBusinessPeople, ImageContainer, InputContainer, LoginContainer, NameCompanyContainer, RegisterAccount } from "./styles";
 
 import businessPeople from '../../assets/businessPeople.png'
+
 
 export function Login() {
     return (
         <LoginContainer>
             <main>
                 <ImageContainer>
-                    <div>
-                        <Lightning size={24}/>
+                    <NameCompanyContainer>
+                        <Lightbulb size={30} color="#FBA94C"/>
                         <h1>Energy</h1>
-                    </div>
-
-                    <img 
-                        src={ businessPeople } 
-                        alt="Imagem de Duas pessoas conversando sobre uma grande ideia" 
-                    />
+                    </NameCompanyContainer>
+                    <ImageBusinessPeople src={ businessPeople }/>
                 </ImageContainer>
                 <RegisterAccount>
-                   
+                    <BoxAllInputs>
+                        <InputContainer>
+                            <EnvelopeSimple size={24}/>
+                            <input type="email" name="" id="" placeholder="E-mail"/>
+                        </InputContainer>
+                        <InputContainer>
+                            <LockSimple size={24}/>
+                            <input type="password" name="" id="" placeholder="Senha"/>
+                        </InputContainer>
+                        <a href="#">Esqueci minha senha</a>
+                    </BoxAllInputs>
+                    <button type="submit">ENTRAR</button>
                 </RegisterAccount>  
             </main>
         </LoginContainer>
