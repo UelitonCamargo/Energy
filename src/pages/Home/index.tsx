@@ -1,6 +1,7 @@
 import { Header } from "../../Components/Header";
+import { Protocol } from "../../Components/Protocol";
 import { ProtocolListHeader } from "../../Components/ProtocolListHeader";
-import { MainContainer, ScreenContainer } from "./styles";
+import { ListOfProtcolsContainer, MainContainer, ScreenContainer } from "./styles";
 
 export function Home() {
     return (
@@ -9,6 +10,20 @@ export function Home() {
             <MainContainer>
                 <ScreenContainer>
                    <ProtocolListHeader /> 
+                   <ListOfProtcolsContainer>
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                        <Protocol />
+                   </ListOfProtcolsContainer>
                 </ScreenContainer>
             </MainContainer>
         </>

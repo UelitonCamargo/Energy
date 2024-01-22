@@ -11,3 +11,12 @@ export const ScreenContainer = styled.div`
     padding: 0 0.93rem;
     margin: 0 auto;
 `
+
+export const ListOfProtcolsContainer = styled.main`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 100vh;
+    margin-top: 2.5rem;
+`
+
