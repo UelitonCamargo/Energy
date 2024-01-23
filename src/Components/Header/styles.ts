@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
+    width: 100%;
     display: flex;
     height: 8.75rem;
     background-color: ${props => props.theme['gray-800']};
+
+    position: fixed;
+    top: 0;
+    left: 0;
 
     border-style:solid;
     border-image-slice: 1;

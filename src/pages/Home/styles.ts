@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const MainContainer = styled.main`
     display: flex;
     min-height: 100vh;
-    padding: 2.5rem 0;
+    margin-top: 8.75rem;;
+    padding: 2.5rem;
 `
 export const ScreenContainer = styled.div`
     flex: 1;

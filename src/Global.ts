@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: bold;
     }
 
+    button {
+        cursor: pointer;
+    }
+
     body {
         background-color: ${props => props.theme['gray-900']};
         color: ${props => props.theme['gray-300']};

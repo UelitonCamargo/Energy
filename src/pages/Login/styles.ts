@@ -1,16 +1,14 @@
 import styled from 'styled-components'
 
 export const LoginContainer = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
 
     main {
         width: 100%;
         max-width: 58.5rem;
-        height: 31.25rem;
 
         display: flex;
         flex-direction: row;
@@ -19,7 +17,7 @@ export const LoginContainer = styled.div`
 
     @media(max-width: 991px) {
         main {
-           height: auto;
+           padding: 2.5rem;
            flex-direction: column;
            align-items: center;
            justify-content: center;
@@ -28,16 +26,16 @@ export const LoginContainer = styled.div`
     }
 
     @media(max-width: 480px) {
-        align-items:normal
+        main {
+            align-items:normal;
+            gap: 2.5rem;
+        }
     }
 `
 
 export const ImageContainer = styled.div`
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
     gap: 1.5rem;
 
     @media(max-width: 991px) {
@@ -59,6 +57,11 @@ export const ImageBusinessPeople = styled.img`
         width: 22.87rem;
         height: 22.87rem;
     }
+
+    @media(max-width: 480px) {
+        width: 14.87rem;
+        height: 14.87rem;
+    }
 `
 
 export const RegisterAccount = styled.div`
@@ -69,15 +72,9 @@ export const RegisterAccount = styled.div`
     
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 1.5rem;
-
-    button {
-        font-size: 1rem;
-        height: 3.12rem;
-        border-radius: 8px;
-        background-color: ${props => props.theme['green-500']};
-        color: ${props => props.theme.white};
-    }
 
     @media(max-width: 480px) {
         width: 100%;
@@ -87,9 +84,34 @@ export const RegisterAccount = styled.div`
 `
 
 export const BoxAllInputs = styled.div`
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 0.625rem;
+        gap: 1rem;
+
+        a {
+            color: ${props => props.theme['green-700']};
+            transition: color .2s;
+
+            &:hover {
+                color: ${props => props.theme['green-500']};
+            }
+        }
+`
+
+export const LoginButton = styled.a`
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 3.4;
+        border-radius: 8px;
+        background-color: ${props => props.theme['green-500']};
+        color: ${props => props.theme.white};
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: ${props => props.theme['green-700']};
+        }
 `
 
 export const InputContainer = styled.div`

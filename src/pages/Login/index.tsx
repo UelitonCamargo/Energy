@@ -1,5 +1,5 @@
 import { EnvelopeSimple, Lightbulb, LockSimple } from "@phosphor-icons/react";
-import { BoxAllInputs, ImageBusinessPeople, ImageContainer, InputContainer, LoginContainer, NameCompanyContainer, RegisterAccount } from "./styles";
+import { BoxAllInputs, ImageBusinessPeople, ImageContainer, InputContainer, LoginButton, LoginContainer, NameCompanyContainer, RegisterAccount } from "./styles";
 
 import businessPeople from '../../assets/businessPeople.png'
 
@@ -27,7 +27,7 @@ export function Login() {
                         </InputContainer>
                         <a href="#">Esqueci minha senha</a>
                     </BoxAllInputs>
-                    <button type="submit">ENTRAR</button>
+                    <LoginButton href="/home">ENTRAR</LoginButton>
                 </RegisterAccount>  
             </main>
         </LoginContainer>
