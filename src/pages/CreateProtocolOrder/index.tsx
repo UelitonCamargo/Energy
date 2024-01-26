@@ -6,6 +6,7 @@ import { ButtonContainer, CalendarContainer, FormContainer, MainContainer, Scree
 import 'react-calendar/dist/Calendar.css' 
 
 import { useState } from 'react'
+import { FormProtocol } from '../../Components/FormProtocol';
 
 type ValuePiece = Date | null
 
@@ -20,10 +21,7 @@ export function CreateProtocolOrder() {
             <MainContainer>
                 <ScreenContainer>
                     <FormContainer>
-                        <p>Form</p>
-                        <p>Form</p>
-                        <p>Form</p>
-                        <p>Form</p>
+                        <FormProtocol />
                     </FormContainer>
                     <CalendarContainer>
                         <ButtonContainer>Voltar</ButtonContainer>
