@@ -1,4 +1,4 @@
-import { AdministrativeDataContainer, FormContainer, IdentificationProjectProtocolContainer, InputContainer, ProtocolStatus, TextAreaContainer, WorkReport, WorkReportContainer } from "./styles";
+import { AdministrativeDataContainer, CheckboxContainer, DataCollectionContainer, FormContainer, IdentificationProjectProtocolContainer, InputContainer, ProtocolStatus, TextAreaContainer, WorkReport, WorkReportContainer } from "./styles";
 
 export function FormProtocol() {
     return (
@@ -36,6 +36,74 @@ export function FormProtocol() {
                     </ProtocolStatus>
                 </WorkReport>
             </WorkReportContainer>
+
+            <DataCollectionContainer>
+                <h2>Dados de Levantamento</h2>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Cliente acompanhou levantamento</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">vizinho apontou local por telefone</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Cliente não atende telefone</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Tirado foto de levantamento</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Paralisação da obra</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Local não encontrado</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Telefone não atende ou inexistente</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Coletando pontos de GPS</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Necessita autorização de passagem</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Necessita autorização de corte/poda de árvores</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Necessita detalhes de travessia - torres de transmissão</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Necessita ocupação de faixa - DER/DNIT</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Necessita laudo do IAP</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Cliente vai alterar pedido da obra</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Características de loteamento rural</label>
+                </CheckboxContainer>
+                <CheckboxContainer>
+                    <input type="checkbox" name="" id="" />
+                    <label htmlFor="">Cliente acompanhou levantamento</label>
+                </CheckboxContainer>
+            </DataCollectionContainer>
         </FormContainer>
     )
 }
