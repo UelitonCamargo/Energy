@@ -21,6 +21,9 @@ export const InputContainer = styled(Input)`
 `
 
 export const TextAreaContainer = styled.textarea`
+    resize: none;
+    width: 100%;
+    height: 7rem;
     background-color: ${props => props.theme['gray-700']};
     padding: 1rem 1rem;
     border-radius: 8px;
@@ -63,13 +66,10 @@ export const ProtocolStatus = styled.div`
 
 export const DataCollectionContainer = styled.div`
     margin-top: 2rem;
-    text-align: center;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.8rem;
-
+    gap: 0.5rem;
 
     border-style:solid;
     border-image-slice: 1;
@@ -80,6 +80,7 @@ export const DataCollectionContainer = styled.div`
     border-image-source: linear-gradient(to right, ${props => props.theme['gray-700']}, ${props => props.theme['gray-800']});
 
     h2 {
+        text-align: center;
         margin-top: 2rem;
         margin-bottom: 1.2rem;
     }
@@ -88,8 +89,7 @@ export const DataCollectionContainer = styled.div`
 export const CheckboxContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
 
     input[type = 'checkbox'] {
         cursor: pointer;
@@ -120,4 +120,21 @@ export const CheckboxContainer = styled.div`
         }
     }
 
+`
+
+export const OccurrenceOfTheWorkContainer = styled.div`
+    margin-top: 2rem;
+
+    border-style:solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-image-source: linear-gradient(to right, ${props => props.theme['gray-700']}, ${props => props.theme['gray-800']});
+
+    h2 {
+        margin: 2rem 0rem;
+        text-align: center;
+    }
 `

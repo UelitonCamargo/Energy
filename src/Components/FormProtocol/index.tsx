@@ -1,4 +1,16 @@
-import { AdministrativeDataContainer, CheckboxContainer, DataCollectionContainer, FormContainer, IdentificationProjectProtocolContainer, InputContainer, ProtocolStatus, TextAreaContainer, WorkReport, WorkReportContainer } from "./styles";
+import { 
+    AdministrativeDataContainer,
+    CheckboxContainer,
+    DataCollectionContainer, 
+    FormContainer, 
+    IdentificationProjectProtocolContainer, 
+    InputContainer, 
+    OccurrenceOfTheWorkContainer, 
+    ProtocolStatus, 
+    TextAreaContainer, 
+    WorkReport, 
+    WorkReportContainer 
+} from "./styles";
 
 export function FormProtocol() {
     return (
@@ -13,7 +25,7 @@ export function FormProtocol() {
                 <InputContainer placeholder="Cidade" type="text" />
                 <InputContainer placeholder="Latitude" type="number" />
                 <InputContainer placeholder="Longitude" type="number" />
-                <TextAreaContainer cols={3} rows={3} placeholder="Descrição" />
+                <TextAreaContainer placeholder="Descrição" />
                 
                 <InputContainer placeholder="Orçamento" type="number" />
                 
@@ -104,6 +116,11 @@ export function FormProtocol() {
                     <label htmlFor="">Cliente acompanhou levantamento</label>
                 </CheckboxContainer>
             </DataCollectionContainer>
+
+            <OccurrenceOfTheWorkContainer>
+                <h2>Ocorrência da obra</h2>
+                <TextAreaContainer placeholder="Descrição"/>
+            </OccurrenceOfTheWorkContainer>
         </FormContainer>
     )
 }

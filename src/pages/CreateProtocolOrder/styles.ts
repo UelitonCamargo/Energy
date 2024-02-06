@@ -17,6 +17,7 @@ export const ScreenContainer = styled.section`
     gap: 2rem;
 
     margin-top: 10.75rem;
+    margin-bottom: 2rem;
 `
 
 export const FormContainer = styled.form`
