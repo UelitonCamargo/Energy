@@ -40,6 +40,7 @@ export const LogoContainer = styled.div`
     gap: 0.5rem;
 
     p {
+        color: ${props => props.theme.white};
         font-size: 1.4rem;
         font-weight: bold;
     }
@@ -56,6 +57,7 @@ export const PerfilContainer = styled.div`
     gap: 0.5rem;
 
     svg {
+        color: ${props => props.theme.white};
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -66,6 +68,14 @@ export const WelcomeContainer = styled.div`
     align-items: center;
     flex-direction: column;
     line-height: 1.6;
+
+    strong, span {
+        color: ${props => props.theme.white};
+    }
+
+    svg {
+        color: ${props => props.theme.white};
+    }
 
     @media(max-width: 480px) {
         display: none;
