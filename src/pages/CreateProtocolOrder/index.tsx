@@ -24,7 +24,7 @@ export function CreateProtocolOrder() {
                         <FormProtocol />
                     </FormContainer>
                     <CalendarContainer>
-                        <ButtonContainer>Voltar</ButtonContainer>
+                        <ButtonContainer href='/home'>Voltar</ButtonContainer>
                         <ButtonContainer>Criar Ordem</ButtonContainer>
                         <h4>Definir Data limite</h4>
                         <Calendar

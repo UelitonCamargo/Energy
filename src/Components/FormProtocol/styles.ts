@@ -2,6 +2,10 @@ import styled from 'styled-components'
 
 export const FormContainer = styled.div`
     padding: 2rem 4rem;
+
+    @media(max-width: 480px) {
+        padding: 2rem 2rem;
+    }
 `
 
 export const AdministrativeDataContainer = styled.div`
@@ -17,7 +21,7 @@ const Input = styled.input`
 `
 
 export const InputContainer = styled(Input)`
-    
+    color: ${props => props.theme['gray-400']};
 `
 
 export const TextAreaContainer = styled.textarea`
@@ -27,6 +31,7 @@ export const TextAreaContainer = styled.textarea`
     background-color: ${props => props.theme['gray-700']};
     padding: 1rem 1rem;
     border-radius: 8px;
+    color: ${props => props.theme['gray-400']};
 `
 
 export const WorkReportContainer = styled.div`
@@ -50,6 +55,10 @@ export const WorkReport = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+
+    @media(max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const IdentificationProjectProtocolContainer = styled.div`
@@ -62,6 +71,7 @@ export const ProtocolStatus = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
 `
 
 export const DataCollectionContainer = styled.div`
@@ -118,6 +128,16 @@ export const CheckboxContainer = styled.div`
         &:checked::before {
             opacity: 1;
         }
+    }
+
+    @media(max-width: 480px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+        padding: 1rem;
+
+        border: 1px solid ${props => props.theme['gray-600']};
+        border-radius: 8px;
     }
 
 `

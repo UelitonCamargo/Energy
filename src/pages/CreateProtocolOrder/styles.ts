@@ -18,17 +18,30 @@ export const ScreenContainer = styled.section`
 
     margin-top: 10.75rem;
     margin-bottom: 2rem;
+
+    @media(max-width: 1280px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @media(max-width: 480px) {
+        margin-top: 8.25rem;
+    }
 `
 
 export const FormContainer = styled.form`
     background-color: ${props => props.theme['gray-800']};
     border-radius: 8px;
+
+    @media(max-width: 1280px) {
+        width: 100%;
+    }
 `
 
 export const CalendarContainer = styled.aside`
-     background-color: ${props => props.theme['gray-800']};
-     border-radius: 8px;
-     padding: 2rem;
+    background-color: ${props => props.theme['gray-800']};
+    border-radius: 8px;
+    padding: 2rem;
 
     display: flex;
     flex-direction: column;
@@ -43,6 +56,15 @@ export const CalendarContainer = styled.aside`
 
     .react-calendar {
         border-radius: 8px;
+
+        @media(max-width: 480px) {
+            width: initial;
+            line-height: initial;
+        }
+    }
+
+    @media(max-width: 1280px) {
+        width: 100%;
     }
 `
 
@@ -59,5 +81,9 @@ export const ButtonContainer = styled.a`
 
     &:hover {
         background-color: ${props => props.theme['green-700']};
+    }
+
+    @media(max-width: 1280px) {
+        width: 50%;
     }
 `

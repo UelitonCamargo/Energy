@@ -35,7 +35,7 @@ export function FormProtocol() {
                 <h2>Boletim Diário de Obra</h2>
                 <WorkReport>
                     <IdentificationProjectProtocolContainer>
-                        <InputContainer placeholder="Protocolo" type="number" />
+                        <InputContainer name="fruit" placeholder="Protocolo" type="number" />
                         <InputContainer placeholder="Protocolo Celesc" type="number" />
                         <InputContainer placeholder="Número de projeto" type="number" />
                         <InputContainer placeholder="Escopo de obra" type="text" />
