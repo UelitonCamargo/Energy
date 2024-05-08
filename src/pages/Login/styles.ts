@@ -83,7 +83,7 @@ export const RegisterAccount = styled.div`
     }
 `
 
-export const BoxAllInputs = styled.div`
+export const BoxAllInputs = styled.form`
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -99,7 +99,7 @@ export const BoxAllInputs = styled.div`
         }
 `
 
-export const LoginButton = styled.a`
+export const LoginButton = styled.button`
         width: 100%;
         font-size: 1rem;
         text-align: center;
@@ -118,6 +118,7 @@ export const InputContainer = styled.div`
     max-width: 22rem;
     height: 3.12rem;
     border-radius: 8px;
+    border: 1px solid ${props => props.theme['gray-500']};
     padding: 0.625rem;
     background-color: ${props => props.theme['gray-600']};
 
@@ -128,6 +129,7 @@ export const InputContainer = styled.div`
     input {
         width: 85%;
         background-color: transparent;
+        color: ${props => props.theme['gray-300']};
 
         &:focus {
             box-shadow: none;
@@ -138,6 +140,11 @@ export const InputContainer = styled.div`
         max-width: none;
     }
 `
+
+export const OutputErrorMessage = styled.span`
+    color: ${props => props.theme['red-500']};
+`
+
 
 
 
