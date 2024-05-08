@@ -10,7 +10,7 @@
 </br>
 <img src="https://raw.githubusercontent.com/Uelitonn6/Energy/master/Images/Create%20Protocol.png" />
 
-<h2>Tecnologia utilizado no projeto</h2>
+<h2>Tecnologias utilizado no projeto</h2>
 <ol>
   <li>Vitejs para criação do projeto</li>
   <li>Styled-components Biblioteca React para estilização de css</li>
