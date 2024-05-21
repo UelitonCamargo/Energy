@@ -17,7 +17,6 @@ export function CreateProtocolOrder() {
 
     return (
         <>
-            <Header />
             <MainContainer>
                 <ScreenContainer>
                     <FormContainer>

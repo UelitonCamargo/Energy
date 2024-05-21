@@ -6,7 +6,6 @@ import { ListOfProtcolsContainer, MainContainer, ScreenContainer } from "./style
 export function Home() {
     return (
         <>
-            <Header />
             <MainContainer>
                 <ScreenContainer>
                    <ProtocolListHeader /> 
