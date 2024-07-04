@@ -1,6 +1,5 @@
 import Calendar from 'react-calendar'
 
-import { Header } from "../../Components/Header";
 import { ButtonContainer, ButtonSubmit, CalendarContainer, FormContainer, MainContainer, ScreenContainer } from "./styles";
 
 import 'react-calendar/dist/Calendar.css' 
