@@ -10,7 +10,7 @@ export function ProtocolListHeader() {
             </ShowQuantityOfProtocolsContainer>
 
             <CreateProtocolContainer>
-                <ButtonCreateProtocol href="/createprotocolorder">
+                <ButtonCreateProtocol to="/createprotocolorder">
                     Criar Protocolo
                 </ButtonCreateProtocol>
                 <OrderProtocols>

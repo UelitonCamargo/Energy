@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import styled from 'styled-components'
 
 export const ProtocolHeaderContainer = styled.div`
@@ -30,7 +32,7 @@ export const CreateProtocolContainer = styled.div`
     gap: 1rem;
 `
 
-export const ButtonCreateProtocol = styled.a`
+export const ButtonCreateProtocol = styled(Link)`
     font-weight: bold;
     color: ${props => props.theme.white};
     background-color: ${props => props.theme['green-500']};

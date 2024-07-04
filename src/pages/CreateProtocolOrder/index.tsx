@@ -1,7 +1,7 @@
 import Calendar from 'react-calendar'
 
 import { Header } from "../../Components/Header";
-import { ButtonContainer, CalendarContainer, FormContainer, MainContainer, ScreenContainer } from "./styles";
+import { ButtonContainer, ButtonSubmit, CalendarContainer, FormContainer, MainContainer, ScreenContainer } from "./styles";
 
 import 'react-calendar/dist/Calendar.css' 
 
@@ -23,8 +23,8 @@ export function CreateProtocolOrder() {
                         <FormProtocol />
                     </FormContainer>
                     <CalendarContainer>
-                        <ButtonContainer href='/home'>Voltar</ButtonContainer>
-                        <ButtonContainer>Criar Ordem</ButtonContainer>
+                        <ButtonContainer to='/home'>Voltar</ButtonContainer>
+                        <ButtonSubmit>Criar Ordem</ButtonSubmit>
                         <h4>Definir Data limite</h4>
                         <Calendar
                             onChange={setValue}

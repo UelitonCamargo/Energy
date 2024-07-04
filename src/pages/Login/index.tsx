@@ -2,12 +2,11 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
-import { useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { EnvelopeSimple, Lightbulb, LockSimple } from "@phosphor-icons/react";
 
 import {
-    BoxAllInputs,
     ImageBusinessPeople,
     ImageContainer,
     InputContainer,
@@ -16,6 +15,7 @@ import {
     NameCompanyContainer,
     RegisterAccount,
     OutputErrorMessage,
+    BoxAllInputs,
 }
     from "./styles";
 
@@ -23,17 +23,17 @@ import businessPeople from '../../assets/businessPeople.png'
 
 const createUserFormSchema = z.object({
     email: z.string()
-        .min(1, 'O e-mail e obrigatorio')
-        .email('Formato de e-mail invalido'),
+        .min(1, 'O e-mail e obrigatório')
+        .email('Formato de e-mail inválido'),
     password: z.string()
-        .min(6, 'A senha precisa de no minimo 6 caracteres'),
+        .min(6, 'A senha precisa de no mínimo 6 caracteres'),
 })
 
 
 type createUserFormData = z.infer<typeof createUserFormSchema>
 
 export function Login() {
-    let navigate = useNavigate()
+    const  navigate = useNavigate()
 
     const { register, handleSubmit, formState: { errors } } = useForm<createUserFormData>({
         resolver: zodResolver(createUserFormSchema)
@@ -41,7 +41,20 @@ export function Login() {
 
     function accessingAccount(data: any) {
         console.log(data)
-        navigate('/home')
+
+        //jeito certo de enviar os dados para o Banco de Dados
+
+        // const accessingAccount = async (data) => {
+        //     try {
+        //       console.log(data);
+        //       await axios.post("http://localhost:5000/signup", data);
+        //       navigate("/home", { replace: true }); // <-- redirect
+        //     } catch (error) {
+        //       console.error("There was an error!", error);
+        //     }
+        //   };
+
+        navigate('/home', { replace: true })
     }
 
     return (
@@ -55,7 +68,7 @@ export function Login() {
                     <ImageBusinessPeople src={businessPeople} />
                 </ImageContainer>
                 <RegisterAccount>
-                    <BoxAllInputs onSubmit={handleSubmit(accessingAccount)} action='/home'>
+                    <BoxAllInputs method='post' onSubmit={handleSubmit(accessingAccount)} >
                         <InputContainer>
                             <EnvelopeSimple size={24} />
                             <input
@@ -72,7 +85,6 @@ export function Login() {
                                 placeholder="Senha"
                                 {...register('password')}
                             />
-
                         </InputContainer>
                         {errors.password && <OutputErrorMessage>{errors.password.message}</OutputErrorMessage>}
                         <a href="#">Esqueci minha senha</a>
