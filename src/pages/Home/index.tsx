@@ -1,4 +1,3 @@
-import { Header } from "../../Components/Header";
 import { Protocol } from "../../Components/Protocol";
 import { ProtocolListHeader } from "../../Components/ProtocolListHeader";
 import { ListOfProtcolsContainer, MainContainer, ScreenContainer } from "./styles";
