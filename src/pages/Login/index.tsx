@@ -2,7 +2,10 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 
+import { useNavigate} from 'react-router-dom'
+
 import { EnvelopeSimple, Lightbulb, LockSimple } from "@phosphor-icons/react";
+
 import {
     BoxAllInputs,
     ImageBusinessPeople,
@@ -30,12 +33,15 @@ const createUserFormSchema = z.object({
 type createUserFormData = z.infer<typeof createUserFormSchema>
 
 export function Login() {
+    let navigate = useNavigate()
+
     const { register, handleSubmit, formState: { errors } } = useForm<createUserFormData>({
         resolver: zodResolver(createUserFormSchema)
     })
 
     function accessingAccount(data: any) {
         console.log(data)
+        navigate('/home')
     }
 
     return (
@@ -49,7 +55,7 @@ export function Login() {
                     <ImageBusinessPeople src={businessPeople} />
                 </ImageContainer>
                 <RegisterAccount>
-                    <BoxAllInputs onSubmit={handleSubmit(accessingAccount)}>
+                    <BoxAllInputs onSubmit={handleSubmit(accessingAccount)} action='/home'>
                         <InputContainer>
                             <EnvelopeSimple size={24} />
                             <input
